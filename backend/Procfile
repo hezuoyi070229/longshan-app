@@ -1,0 +1,1 @@
+web: java -jar target/longshan-app-1.0.0.jar
