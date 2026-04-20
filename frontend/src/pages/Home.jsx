@@ -19,30 +19,15 @@ function Home() {
     try {
       setLoading(true)
       
-      // 获取本周末的日期（周六和周日）
+      // 获取今天和未来7天的日期范围（用于显示近期班车）
       const today = dayjs()
-      const dayOfWeek = today.day() // 0是周日，6是周六
-      let saturday, sunday
-      
-      if (dayOfWeek === 0) {
-        // 今天是周日，本周六是昨天
-        saturday = today.subtract(1, 'day')
-        sunday = today
-      } else if (dayOfWeek === 6) {
-        // 今天是周六
-        saturday = today
-        sunday = today.add(1, 'day')
-      } else {
-        // 周一到周五，计算本周六
-        saturday = today.add(6 - dayOfWeek, 'day')
-        sunday = today.add(7 - dayOfWeek, 'day')
-      }
+      const endDate = today.add(7, 'day')
       
       const [activityRes, busRes, feedbackRes] = await Promise.all([
         activityApi.getList({ status: '报名中' }),
         busApi.getSchedules({ 
-          startDate: saturday.format('YYYY-MM-DD'),
-          endDate: sunday.format('YYYY-MM-DD')
+          startDate: today.format('YYYY-MM-DD'),
+          endDate: endDate.format('YYYY-MM-DD')
         }),
         feedbackApi.getList({})
       ])
