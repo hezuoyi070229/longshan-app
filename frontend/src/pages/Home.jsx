@@ -116,7 +116,13 @@ function Home() {
       </div>
 
       <h2 style={{ marginBottom: 24 }}>🚌 本周末班车</h2>
+      {/* 调试信息 */}
+      <div style={{ padding: 10, background: '#f0f0f0', marginBottom: 16 }}>
+        <p>调试: 班车数据条数 = {busSchedules.length}</p>
+        <p>调试: 数据内容 = {JSON.stringify(busSchedules)}</p>
+      </div>
       <Row gutter={[16, 16]} style={{ marginBottom: 32 }}>
+        {busSchedules.length === 0 && <p style={{ padding: 20 }}>暂无班车数据</p>}
         {busSchedules.map(schedule => (
           <Col xs={24} sm={12} key={schedule.id}>
             <Card className="card-hover">
