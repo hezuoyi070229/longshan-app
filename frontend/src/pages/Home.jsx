@@ -20,37 +20,22 @@ function Home() {
     try {
       setLoading(true)
       
-      // 获取今天和未来7天的日期范围（用于显示近期班车）
-      const today = dayjs()
-      const endDate = today.add(7, 'day')
-      
-      console.log('查询班车日期范围:', today.format('YYYY-MM-DD'), '到', endDate.format('YYYY-MM-DD'))
-      
       const [activityRes, busRes, feedbackRes] = await Promise.all([
         activityApi.getList({ status: '报名中' }),
-        busApi.getSchedules({ 
-          startDate: today.format('YYYY-MM-DD'),
-          endDate: endDate.format('YYYY-MM-DD')
-        }),
+        busApi.getSchedules({}),
         feedbackApi.getList({})
       ])
-      
-      console.log('活动数据:', activityRes)
-      console.log('班车数据:', busRes)
-      console.log('反馈数据:', feedbackRes)
       
       if (activityRes.code === 200) {
         setActivities(activityRes.data.slice(0, 2))
       }
       if (busRes.code === 200) {
-        console.log('班车数据条数:', busRes.data.length)
         setBusSchedules(busRes.data.slice(0, 2))
       }
       if (feedbackRes.code === 200) {
         setFeedbacks(feedbackRes.data.slice(0, 3))
       }
     } catch (error) {
-      console.error('加载数据失败:', error)
       message.error('加载数据失败')
     } finally {
       setLoading(false)
@@ -115,14 +100,9 @@ function Home() {
         </Link>
       </div>
 
-      <h2 style={{ marginBottom: 24 }}>🚌 本周末班车</h2>
-      {/* 调试信息 */}
-      <div style={{ padding: 10, background: '#f0f0f0', marginBottom: 16 }}>
-        <p>调试: 班车数据条数 = {busSchedules.length}</p>
-        <p>调试: 数据内容 = {JSON.stringify(busSchedules)}</p>
-      </div>
+      <h2 style={{ marginBottom: 24 }}>🚌 本周班车</h2>
       <Row gutter={[16, 16]} style={{ marginBottom: 32 }}>
-        {busSchedules.length === 0 && <p style={{ padding: 20 }}>暂无班车数据</p>}
+        {busSchedules.length === 0 && <Col xs={24}><p style={{ padding: 20, textAlign: 'center', color: '#999' }}>暂无班车数据</p></Col>}
         {busSchedules.map(schedule => (
           <Col xs={24} sm={12} key={schedule.id}>
             <Card className="card-hover">
