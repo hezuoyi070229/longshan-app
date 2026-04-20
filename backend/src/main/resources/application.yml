@@ -1,13 +1,13 @@
 server:
-  port: ${PORT:8080}
+  port: 8081
 
 spring:
   application:
     name: longshan-app
   datasource:
-    url: jdbc:mysql://${MYSQLHOST:localhost}:${MYSQLPORT:3306}/${MYSQL_DATABASE:railway}?useUnicode=true&characterEncoding=utf-8&serverTimezone=Asia/Shanghai&createDatabaseIfNotExist=true
-    username: ${MYSQLUSER:root}
-    password: ${MYSQLPASSWORD:root123}
+    url: jdbc:mysql://localhost:3306/longshan?useUnicode=true&characterEncoding=utf-8&serverTimezone=Asia/Shanghai&createDatabaseIfNotExist=true
+    username: root
+    password: root123
     driver-class-name: com.mysql.cj.jdbc.Driver
   jpa:
     hibernate:
