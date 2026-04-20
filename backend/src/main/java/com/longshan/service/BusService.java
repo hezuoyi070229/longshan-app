@@ -20,16 +20,26 @@ public class BusService extends ServiceImpl<BusScheduleMapper, BusSchedule> {
     @Autowired
     private BusBookingMapper bookingMapper;
     
-    public List<BusSchedule> listSchedules(String direction, LocalDate date) {
+    public List<BusSchedule> listSchedules(String direction, LocalDate date, LocalDate endDate) {
         LambdaQueryWrapper<BusSchedule> wrapper = new LambdaQueryWrapper<>();
         if (direction != null && !direction.isEmpty()) {
             wrapper.eq(BusSchedule::getDirection, direction);
         }
-        if (date != null) {
+        if (date != null && endDate != null) {
+            // 日期范围查询
+            wrapper.ge(BusSchedule::getDepartDate, date)
+                   .le(BusSchedule::getDepartDate, endDate);
+        } else if (date != null) {
+            // 单日期查询
             wrapper.eq(BusSchedule::getDepartDate, date);
         }
-        wrapper.orderByAsc(BusSchedule::getDepartTime);
+        wrapper.orderByAsc(BusSchedule::getDepartDate)
+               .orderByAsc(BusSchedule::getDepartTime);
         return list(wrapper);
+    }
+    
+    public List<BusSchedule> listSchedulesByDateRange(String direction, LocalDate startDate, LocalDate endDate) {
+        return listSchedules(direction, startDate, endDate);
     }
     
     @Transactional

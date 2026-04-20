@@ -21,9 +21,27 @@ public class BusController {
     @GetMapping("/schedules")
     public Result<List<BusSchedule>> listSchedules(
             @RequestParam(required = false) String direction,
-            @RequestParam(required = false) String date) {
-        LocalDate departDate = date != null ? LocalDate.parse(date) : null;
-        List<BusSchedule> list = busService.listSchedules(direction, departDate);
+            @RequestParam(required = false) String date,
+            @RequestParam(required = false) String startDate,
+            @RequestParam(required = false) String endDate) {
+        
+        // 支持单日期查询
+        if (date != null && !date.isEmpty()) {
+            LocalDate departDate = LocalDate.parse(date);
+            List<BusSchedule> list = busService.listSchedules(direction, departDate, null);
+            return Result.success(list);
+        }
+        
+        // 支持日期范围查询
+        if (startDate != null && !startDate.isEmpty() && endDate != null && !endDate.isEmpty()) {
+            LocalDate start = LocalDate.parse(startDate);
+            LocalDate end = LocalDate.parse(endDate);
+            List<BusSchedule> list = busService.listSchedulesByDateRange(direction, start, end);
+            return Result.success(list);
+        }
+        
+        // 默认查询所有
+        List<BusSchedule> list = busService.listSchedules(direction, null, null);
         return Result.success(list);
     }
     
