@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 import { activityApi, busApi, feedbackApi } from '../services/api'
 import dayjs from 'dayjs'
 
-// 版本: 2026-04-20 - 修复班车数据显示问题
+// 版本: 2026-04-20-v3 - 修复班车数据显示问题
 function Home() {
   const [activities, setActivities] = useState([])
   const [busSchedules, setBusSchedules] = useState([])
