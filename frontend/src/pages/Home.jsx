@@ -23,6 +23,8 @@ function Home() {
       const today = dayjs()
       const endDate = today.add(7, 'day')
       
+      console.log('查询班车日期范围:', today.format('YYYY-MM-DD'), '到', endDate.format('YYYY-MM-DD'))
+      
       const [activityRes, busRes, feedbackRes] = await Promise.all([
         activityApi.getList({ status: '报名中' }),
         busApi.getSchedules({ 
@@ -32,16 +34,22 @@ function Home() {
         feedbackApi.getList({})
       ])
       
+      console.log('活动数据:', activityRes)
+      console.log('班车数据:', busRes)
+      console.log('反馈数据:', feedbackRes)
+      
       if (activityRes.code === 200) {
         setActivities(activityRes.data.slice(0, 2))
       }
       if (busRes.code === 200) {
+        console.log('班车数据条数:', busRes.data.length)
         setBusSchedules(busRes.data.slice(0, 2))
       }
       if (feedbackRes.code === 200) {
         setFeedbacks(feedbackRes.data.slice(0, 3))
       }
     } catch (error) {
+      console.error('加载数据失败:', error)
       message.error('加载数据失败')
     } finally {
       setLoading(false)
