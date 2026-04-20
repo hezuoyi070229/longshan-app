@@ -1,0 +1,5 @@
+# 确保所有文本文件使用 LF 行尾
+* text=auto eol=lf
+
+# 确保 shell 脚本有执行权限
+*.sh text eol=lf executable
