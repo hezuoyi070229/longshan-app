@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom'
+import { BrowserRouter as Router, Routes, Route, Link, useLocation } from 'react-router-dom'
 import { Layout, Menu } from 'antd'
 import { HomeOutlined, CalendarOutlined, CarOutlined, MessageOutlined, UserOutlined } from '@ant-design/icons'
 import Home from './pages/Home'
@@ -12,7 +12,10 @@ import Profile from './pages/Profile'
 
 const { Header, Content, Footer } = Layout
 
-function App() {
+// 导航栏组件
+function Navigation() {
+  const location = useLocation()
+  
   const menuItems = [
     { key: '/', icon: <HomeOutlined />, label: <Link to="/">首页</Link> },
     { key: '/activities', icon: <CalendarOutlined />, label: <Link to="/activities">活动</Link> },
@@ -22,21 +25,52 @@ function App() {
   ]
 
   return (
+    <Header className="nav-modern" style={{ 
+      position: 'sticky', 
+      top: 0, 
+      zIndex: 1000, 
+      width: '100%',
+      padding: '0 24px',
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'space-between',
+    }}>
+      <div style={{ 
+        fontSize: '20px', 
+        fontWeight: '700', 
+        background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+        WebkitBackgroundClip: 'text',
+        WebkitTextFillColor: 'transparent',
+        backgroundClip: 'text',
+        letterSpacing: '-0.5px',
+      }}>
+        龙山青年共创实验室
+      </div>
+      <Menu
+        mode="horizontal"
+        selectedKeys={[location.pathname]}
+        items={menuItems}
+        style={{ 
+          flex: 1, 
+          minWidth: 0, 
+          maxWidth: '600px',
+          justifyContent: 'flex-end',
+          background: 'transparent',
+          borderBottom: 'none',
+        }}
+        className="nav-menu-modern"
+      />
+    </Header>
+  )
+}
+
+function App() {
+  return (
     <Router>
-      <Layout style={{ minHeight: '100vh' }}>
-        <Header style={{ position: 'sticky', top: 0, zIndex: 1, width: '100%', background: '#fff' }}>
-          <div style={{ float: 'left', fontSize: '18px', fontWeight: 'bold', marginRight: '24px' }}>
-            龙山青年共创实验室
-          </div>
-          <Menu
-            mode="horizontal"
-            defaultSelectedKeys={['/']}
-            items={menuItems}
-            style={{ flex: 1, minWidth: 0 }}
-          />
-        </Header>
-        <Content style={{ padding: '0 50px', marginTop: 16 }}>
-          <div style={{ background: '#fff', padding: 24, minHeight: 380 }}>
+      <Layout style={{ minHeight: '100vh', background: 'transparent' }}>
+        <Navigation />
+        <Content style={{ padding: '24px 50px', marginTop: 16 }}>
+          <div className="glass-card" style={{ padding: 32, minHeight: 500 }}>
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/activities" element={<ActivityList />} />
@@ -49,8 +83,14 @@ function App() {
             </Routes>
           </div>
         </Content>
-        <Footer style={{ textAlign: 'center' }}>
-          龙山青年共创实验室 ©2026 Created for Challenge Cup
+        <Footer style={{ 
+          textAlign: 'center', 
+          background: 'transparent',
+          color: 'var(--text-secondary)',
+          padding: '24px',
+        }}>
+          <div style={{ fontWeight: 600, marginBottom: 8 }}>龙山青年共创实验室</div>
+          <div style={{ fontSize: '12px', opacity: 0.7 }}>©2026 Created for Challenge Cup</div>
         </Footer>
       </Layout>
     </Router>
