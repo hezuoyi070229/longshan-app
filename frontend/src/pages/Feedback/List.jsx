@@ -105,10 +105,10 @@ function FeedbackList() {
                         <Tag color={getStatusColor(item.status)}>{item.status}</Tag>
                       </div>
                       <h3 style={{ marginBottom: 8 }}>{item.title}</h3>
-                      <p style={{ color: '#666', marginBottom: 12 }}>
+                      <p style={{ color: '#000000', marginBottom: 12 }}>
                         {item.content?.substring(0, 100)}...
                       </p>
-                      <div style={{ color: '#999', fontSize: '12px' }}>
+                      <div style={{ color: '#000000', fontSize: '12px' }}>
                         {dayjs(item.createTime).format('YYYY-MM-DD HH:mm')}
                       </div>
                     </div>
@@ -123,10 +123,10 @@ function FeedbackList() {
                     borderRadius: 8,
                     borderLeft: '3px solid #14b8a6'
                   }}>
-                    <div style={{ color: '#14b8a6', fontWeight: 'bold', marginBottom: 4 }}>
+                    <div style={{ color: '#000000', fontWeight: 'bold', marginBottom: 4 }}>
                       官方回复
                     </div>
-                    <p style={{ color: '#666' }}>{item.officialReply}</p>
+                    <p style={{ color: '#000000' }}>{item.officialReply}</p>
                   </div>
                 )}
 
@@ -135,10 +135,11 @@ function FeedbackList() {
                     type="link" 
                     icon={<LikeOutlined />}
                     onClick={() => handleUpvote(item.id)}
+                    style={{ color: '#f59e0b' }}
                   >
                     已有 {item.upvotes} 人 +1
                   </Button>
-                  <Button type="link">
+                  <Button type="link" style={{ color: '#f59e0b' }}>
                     查看详情 <ArrowRightOutlined />
                   </Button>
                 </div>

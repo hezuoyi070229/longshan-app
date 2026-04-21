@@ -103,7 +103,7 @@ function FeedbackCreate() {
             <Button type="primary" htmlType="submit" size="large" block>
               提交反馈
             </Button>
-            <p style={{ textAlign: 'center', color: '#999', marginTop: 8 }}>
+            <p style={{ textAlign: 'center', color: '#000000', marginTop: 8 }}>
               您的反馈将公开显示，帮助更多人
             </p>
           </Form.Item>

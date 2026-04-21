@@ -71,7 +71,7 @@ body {
   display: none !important;
 }
 
-/* 滚动条美�?*/
+/* 滚动条美�?*/
 ::-webkit-scrollbar {
   width: 8px;
   height: 8px;
@@ -133,7 +133,7 @@ body {
   border: none !important;
 }
 
-/* 输入框样�?*/
+/* 输入框样�?*/
 .ant-input,
 .ant-input-affix-wrapper {
   border-radius: 12px !important;
@@ -147,7 +147,7 @@ body {
   box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.15) !important;
 }
 
-/* 卡片样式 - 高透明悬浮玻璃�?*/
+/* 卡片样式 - 高透明悬浮玻璃�?*/
 .ant-card {
   border-radius: 20px !important;
   border: 1px solid rgba(255, 255, 255, 0.25) !important;
@@ -170,13 +170,13 @@ body {
   transform: translateY(-6px);
 }
 
-/* 卡片内文字颜�?- 黑色 */
+/* 卡片内文字颜�?- 黑色 */
 .ant-card-body {
-  color: #1f2937 !important;
+  color: #000000 !important;
 }
 
 .ant-card-meta-title {
-  color: #111827 !important;
+  color: #000000 !important;
   font-weight: 600 !important;
 }
 
@@ -188,26 +188,152 @@ body {
 .ant-picker-calendar {
   border-radius: 16px !important;
   overflow: hidden !important;
+  background: rgba(255, 255, 255, 0.15) !important;
+  backdrop-filter: blur(20px) !important;
+  -webkit-backdrop-filter: blur(20px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.25) !important;
 }
 
 .ant-picker-calendar-header {
   padding: 16px 24px !important;
+  background: transparent !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2) !important;
 }
 
-/* 日历选中日期 - 北极光蓝绿色 */
-.ant-picker-calendar-date-value {
-  color: var(--text-primary) !important;
+/* 日历表格背景透明 */
+.ant-picker-calendar-full .ant-picker-panel {
+  background: transparent !important;
 }
 
-.ant-picker-calendar-selected-day .ant-picker-calendar-date {
-  background: linear-gradient(135deg, #38bdf8 0%, #22d3ee 100%) !important;
+.ant-picker-calendar-full .ant-picker-calendar-date-content {
+  background: transparent !important;
+}
+
+/* 日历日期单元格 */
+.ant-picker-calendar-date {
+  background: transparent !important;
+}
+
+/* 日历选择器下拉框透明 */
+.ant-picker-dropdown .ant-picker-panel-container {
+  background: rgba(255, 255, 255, 0.15) !important;
+  backdrop-filter: blur(20px) !important;
+  -webkit-backdrop-filter: blur(20px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.25) !important;
+  border-radius: 16px !important;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1) !important;
+}
+
+.ant-picker-dropdown .ant-picker-panel {
+  background: transparent !important;
+}
+
+.ant-picker-dropdown .ant-picker-header {
+  background: transparent !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2) !important;
+}
+
+.ant-picker-dropdown .ant-picker-body {
+  background: transparent !important;
+}
+
+.ant-picker-dropdown .ant-picker-cell-inner {
+  background: transparent !important;
+}
+
+/* 日历头部按钮 */
+.ant-picker-calendar-mode-switch {
+  background: rgba(255, 255, 255, 0.2) !important;
   border-radius: 8px !important;
-  box-shadow: 0 4px 12px rgba(56, 189, 248, 0.4) !important;
+}
+
+.ant-picker-calendar-mode-switch .ant-radio-button-wrapper {
+  background: transparent !important;
+  border-color: rgba(255, 255, 255, 0.3) !important;
+  color: #000000 !important;
+}
+
+.ant-picker-calendar-mode-switch .ant-radio-button-wrapper-checked {
+  background: linear-gradient(135deg, #f59e0b 0%, #f97316 100%) !important;
+  color: white !important;
+  border-color: transparent !important;
+}
+
+/* 日历表格主体透明 */
+.ant-picker-calendar .ant-picker-panel {
+  background: transparent !important;
+}
+
+.ant-picker-calendar table {
+  background: transparent !important;
+}
+
+.ant-picker-calendar thead {
+  background: transparent !important;
+}
+
+.ant-picker-calendar tbody {
+  background: transparent !important;
+}
+
+.ant-picker-calendar th {
+  background: transparent !important;
+  color: #000000 !important;
+}
+
+.ant-picker-calendar td {
+  background: transparent !important;
+}
+
+/* 日历日期值 */
+.ant-picker-calendar-date-value {
+  color: #000000 !important;
+}
+
+/* 日历日期单元格悬停 */
+.ant-picker-calendar-date:hover {
+  background: rgba(255, 255, 255, 0.2) !important;
+}
+
+/* 日历选中日期 - 改为深蓝色 */
+.ant-picker-calendar-selected-day .ant-picker-calendar-date {
+  background: linear-gradient(135deg, #0284c7 0%, #0ea5e9 100%) !important;
+  border-radius: 8px !important;
+  box-shadow: 0 4px 12px rgba(2, 132, 199, 0.5) !important;
 }
 
 .ant-picker-calendar-selected-day .ant-picker-calendar-date-value {
   color: white !important;
   font-weight: 600 !important;
+}
+
+/* 日历今天日期 */
+.ant-picker-calendar-today .ant-picker-calendar-date {
+  border-color: #0284c7 !important;
+  border-width: 2px !important;
+}
+
+.ant-picker-calendar-today .ant-picker-calendar-date-value {
+  color: #0284c7 !important;
+  font-weight: 600 !important;
+}
+
+/* 日历标记点 */
+.ant-picker-calendar-date-content .ant-badge-status-dot {
+  background: #0284c7 !important;
+  box-shadow: 0 0 0 2px rgba(2, 132, 199, 0.4) !important;
+}
+
+/* 日历日期单元格 */
+.ant-picker-calendar-date {
+  border-radius: 8px !important;
+  transition: all 0.3s ease !important;
+}
+
+/* 日历日期悬停效果 */
+.ant-picker-calendar-date:hover {
+  background: rgba(56, 189, 248, 0.15) !important;
+  transform: scale(1.05) !important;
 }
 
 /* 日历按钮 - 北极光蓝绿色 */
@@ -247,7 +373,7 @@ body {
   background: rgba(255, 255, 255, 0.1) !important;
   border: 1px solid rgba(255, 255, 255, 0.2) !important;
   transition: all 0.3s ease !important;
-  color: #1f2937 !important;
+  color: #000000 !important;
 }
 
 .ant-list-item:hover {
@@ -255,9 +381,9 @@ body {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08) !important;
 }
 
-/* 列表项文�?- 黑色 */
+/* 列表项文�?- 黑色 */
 .ant-list-item-meta-title {
-  color: #111827 !important;
+  color: #000000 !important;
   font-weight: 600 !important;
 }
 
@@ -265,12 +391,12 @@ body {
   color: #000000 !important;
 }
 
-/* 步骤条样�?*/
+/* 步骤条样�?*/
 .ant-steps-item-icon {
   border-radius: 50% !important;
 }
 
-/* 进度条样�?*/
+/* 进度条样�?*/
 .ant-progress-bg {
   border-radius: 100px !important;
   background: linear-gradient(90deg, #38bdf8 0%, #22d3ee 100%) !important;
@@ -310,7 +436,7 @@ body {
   color: white !important;
 }
 
-/* 开关样�?*/
+/* 开关样�?*/
 .ant-switch-checked {
   background: linear-gradient(135deg, #10b981 0%, #059669 100%) !important;
 }
@@ -325,7 +451,7 @@ body {
   box-shadow: 0 2px 8px rgba(56, 189, 248, 0.4) !important;
 }
 
-/* 时间选择器样�?*/
+/* 时间选择器样�?*/
 .ant-picker {
   border-radius: 12px !important;
   border: 1px solid rgba(0, 0, 0, 0.08) !important;
@@ -347,7 +473,7 @@ body {
   animation: slideInUp 0.5s ease-out;
 }
 
-/* 响应式调�?*/
+/* 响应式调�?*/
 @media (max-width: 768px) {
   .nav-menu-modern {
     display: none !important;

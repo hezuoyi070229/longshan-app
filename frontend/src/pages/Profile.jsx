@@ -80,8 +80,8 @@ function Profile() {
                     <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
                       <div>
                         <h3>{item.title}</h3>
-                        <p style={{ color: '#666' }}>{item.location}</p>
-                        <p style={{ color: '#999', fontSize: '12px' }}>
+                        <p style={{ color: '#000000' }}>{item.location}</p>
+                        <p style={{ color: '#000000', fontSize: '12px' }}>
                           {dayjs(item.createTime).format('YYYY-MM-DD HH:mm')}
                         </p>
                       </div>
@@ -109,9 +109,9 @@ function Profile() {
                     <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
                       <div>
                         <h3>班车预约</h3>
-                        <p style={{ color: '#666' }}>乘车人: {item.userName}</p>
-                        <p style={{ color: '#666' }}>验证码: <strong>{item.checkinCode}</strong></p>
-                        <p style={{ color: '#999', fontSize: '12px' }}>
+                        <p style={{ color: '#000000' }}>乘车人: {item.userName}</p>
+                        <p style={{ color: '#000000' }}>验证码: <strong>{item.checkinCode}</strong></p>
+                        <p style={{ color: '#000000', fontSize: '12px' }}>
                           {dayjs(item.bookingTime).format('YYYY-MM-DD HH:mm')}
                         </p>
                       </div>

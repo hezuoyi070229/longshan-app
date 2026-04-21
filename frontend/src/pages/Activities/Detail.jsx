@@ -98,14 +98,14 @@ function ActivityDetail() {
           <Tag color={getStatusColor(activity.status)}>{activity.status}</Tag>
         </div>
 
-        <p style={{ color: '#666', marginBottom: 8 }}>
+        <p style={{ color: '#000000', marginBottom: 8 }}>
           <UserOutlined /> 发起人: {activity.creatorName}
         </p>
-        <p style={{ color: '#666', marginBottom: 8 }}>
+        <p style={{ color: '#000000', marginBottom: 8 }}>
           <EnvironmentOutlined /> 地点: {activity.location}
         </p>
         {activity.proposedDates && (
-          <p style={{ color: '#666', marginBottom: 8 }}>
+          <p style={{ color: '#000000', marginBottom: 8 }}>
             <CalendarOutlined /> 建议日期: {activity.proposedDates}
           </p>
         )}
@@ -113,7 +113,7 @@ function ActivityDetail() {
         <div style={{ margin: '24px 0', padding: '16px', background: 'rgba(6, 182, 212, 0.08)', borderRadius: '8px' }}>
           <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: 8 }}>
             <span>已有 {activity.currentPeople} 人想参加（最低 {activity.minPeople} 人）</span>
-            <span style={{ color: isFull ? '#06b6d4' : '#3b82f6', fontWeight: 'bold' }}>
+            <span style={{ color: '#000000', fontWeight: 'bold' }}>
               {progressPercent}%
             </span>
           </div>
@@ -124,12 +124,12 @@ function ActivityDetail() {
             strokeColor={isFull ? '#06b6d4' : '#3b82f6'}
           />
           {isFull && activity.scheduledDate && (
-            <p style={{ color: '#06b6d4', marginTop: 8, textAlign: 'center' }}>
+            <p style={{ color: '#000000', marginTop: 8, textAlign: 'center' }}>
               已达成！将于 {dayjs(activity.scheduledDate).format('YYYY年M月D日')} 举办
             </p>
           )}
           {!isFull && (
-            <p style={{ color: '#1890ff', marginTop: 8, textAlign: 'center' }}>
+            <p style={{ color: '#000000', marginTop: 8, textAlign: 'center' }}>
               还差 {activity.minPeople - activity.currentPeople} 人成行，点击支持！
             </p>
           )}
@@ -146,7 +146,7 @@ function ActivityDetail() {
         >
           {isFull ? '已排期，点击报名参加' : '我想参加'}
         </Button>
-        <p style={{ textAlign: 'center', color: '#999', marginTop: 8, fontSize: '12px' }}>
+        <p style={{ textAlign: 'center', color: '#000000', marginTop: 8, fontSize: '12px' }}>
           （报名后获取具体地点和注意事项）
         </p>
       </Card>

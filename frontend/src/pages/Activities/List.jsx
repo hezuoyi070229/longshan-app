@@ -85,7 +85,7 @@ function ActivityList() {
                 title={activity.title}
                 extra={<Tag color={getCategoryColor(activity.category)}>{activity.category}</Tag>}
               >
-                <p style={{ color: '#666', marginBottom: 12 }}>
+                <p style={{ color: '#000000', marginBottom: 12 }}>
                   <EnvironmentOutlined /> {activity.location}
                 </p>
                 <p style={{ marginBottom: 12 }}>发起人: {activity.creatorName}</p>
@@ -97,7 +97,7 @@ function ActivityList() {
                 <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: 12 }}>
                   <Tag color={getStatusColor(activity.status)}>{activity.status}</Tag>
                   {activity.scheduledDate && (
-                    <span style={{ color: '#06b6d4' }}>
+                    <span style={{ color: '#000000' }}>
                       {dayjs(activity.scheduledDate).format('M月D日')}举办
                     </span>
                   )}

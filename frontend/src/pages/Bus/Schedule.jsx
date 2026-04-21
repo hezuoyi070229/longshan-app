@@ -109,20 +109,20 @@ function BusSchedule() {
                             <span style={{ fontSize: '20px', fontWeight: 'bold', marginLeft: 12 }}>
                               {schedule.departTime}
                             </span>
-                            <span style={{ margin: '0 8px', color: '#999' }}>→</span>
+                            <span style={{ margin: '0 8px', color: '#000000' }}>→</span>
                             <span>{schedule.arriveTime}</span>
                           </div>
                           <div style={{ textAlign: 'right' }}>
-                            <div style={{ fontSize: '18px', color: '#f5222d', fontWeight: 'bold' }}>
+                            <div style={{ fontSize: '18px', color: '#000000', fontWeight: 'bold' }}>
                               ¥{schedule.price}
                             </div>
-                            <div style={{ fontSize: '12px', color: '#666' }}>
+                            <div style={{ fontSize: '12px', color: '#000000' }}>
                               剩余 {remainingSeats} 座
                             </div>
                           </div>
                         </div>
                         
-                        <div style={{ marginTop: 12, color: '#666' }}>
+                        <div style={{ marginTop: 12, color: '#000000' }}>
                           <p><EnvironmentOutlined /> {schedule.fromLocation}</p>
                           <p><EnvironmentOutlined /> {schedule.toLocation}</p>
                         </div>
@@ -158,7 +158,7 @@ function BusSchedule() {
             <p>
               <strong>{selectedSchedule.direction}</strong> · {selectedSchedule.departTime}
             </p>
-            <p style={{ color: '#666', fontSize: '12px' }}>
+            <p style={{ color: '#000000', fontSize: '12px' }}>
               {selectedSchedule.fromLocation} → {selectedSchedule.toLocation}
             </p>
           </div>

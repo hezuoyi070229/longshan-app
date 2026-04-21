@@ -118,7 +118,7 @@ function ActivityCreate() {
             <Button type="primary" htmlType="submit" size="large" block>
               提交发起
             </Button>
-            <p style={{ textAlign: 'center', color: '#999', marginTop: 8 }}>
+            <p style={{ textAlign: 'center', color: '#000000', marginTop: 8 }}>
               （提交后平台审核，24小时内上线）
             </p>
           </Form.Item>
