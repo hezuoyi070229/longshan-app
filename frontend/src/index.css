@@ -65,6 +65,11 @@ p, span, div {
 
 .ant-btn {
   font-size: 20px !important;
+  color: #000000 !important;
+}
+
+.ant-btn > span {
+  color: #000000 !important;
 }
 
 .ant-tag {
