@@ -72,7 +72,7 @@
   background: var(--primary-gradient);
   border: none;
   border-radius: var(--radius-full);
-  color: white;
+  color: #000000;
   font-weight: 600;
   padding: 12px 24px;
   transition: all var(--transition-normal);

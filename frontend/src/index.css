@@ -324,7 +324,7 @@ p, span, div {
 
 .ant-picker-calendar-mode-switch .ant-radio-button-wrapper-checked {
   background: linear-gradient(135deg, #f59e0b 0%, #f97316 100%) !important;
-  color: white !important;
+  color: #000000 !important;
   border-color: transparent !important;
 }
 
