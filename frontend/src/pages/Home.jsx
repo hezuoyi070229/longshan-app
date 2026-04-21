@@ -87,30 +87,30 @@ function Home() {
         <Col xs={24} sm={8}>
           <div className="stat-card" style={{ background: 'linear-gradient(135deg, rgba(6, 182, 212, 0.1) 0%, rgba(20, 184, 166, 0.1) 100%)' }}>
             <Statistic
-              title={<span style={{ color: '#000000', fontWeight: 600 }}>进行中的活动</span>}
+              title={<span style={{ color: '#ffffff', fontWeight: 600 }}>进行中的活动</span>}
               value={stats.totalActivities}
               prefix={<FireOutlined style={{ color: '#ef4444', fontSize: '24px' }} />}
-              valueStyle={{ color: '#000000', fontWeight: 700, fontSize: '28px' }}
+              valueStyle={{ color: '#ffffff', fontWeight: 700, fontSize: '28px' }}
             />
           </div>
         </Col>
         <Col xs={24} sm={8}>
           <div className="stat-card" style={{ background: 'linear-gradient(135deg, rgba(16, 185, 129, 0.1) 0%, rgba(5, 150, 105, 0.1) 100%)' }}>
             <Statistic
-              title={<span style={{ color: '#000000', fontWeight: 600 }}>本周班车</span>}
+              title={<span style={{ color: '#ffffff', fontWeight: 600 }}>本周班车</span>}
               value={stats.totalBusSchedules}
               prefix={<CarOutlined style={{ color: '#10b981', fontSize: '24px' }} />}
-              valueStyle={{ color: '#000000', fontWeight: 700, fontSize: '28px' }}
+              valueStyle={{ color: '#ffffff', fontWeight: 700, fontSize: '28px' }}
             />
           </div>
         </Col>
         <Col xs={24} sm={8}>
           <div className="stat-card" style={{ background: 'linear-gradient(135deg, rgba(59, 130, 246, 0.1) 0%, rgba(37, 99, 235, 0.1) 100%)' }}>
             <Statistic
-              title={<span style={{ color: '#000000', fontWeight: 600 }}>反馈建议</span>}
+              title={<span style={{ color: '#ffffff', fontWeight: 600 }}>反馈建议</span>}
               value={stats.totalFeedbacks}
               prefix={<CommentOutlined style={{ color: '#8b5cf6', fontSize: '24px' }} />}
-              valueStyle={{ color: '#000000', fontWeight: 700, fontSize: '28px' }}
+              valueStyle={{ color: '#ffffff', fontWeight: 700, fontSize: '28px' }}
             />
           </div>
         </Col>
@@ -135,7 +135,7 @@ function Home() {
             本周热门活动
           </h2>
           <Link to="/activities">
-            <Button type="link" style={{ color: '#000000' }}>
+            <Button type="link" style={{ color: '#ffffff' }}>
               查看更多 <ArrowRightOutlined />
             </Button>
           </Link>
@@ -150,7 +150,7 @@ function Home() {
                 bodyStyle={{ padding: 20 }}
               >
                 <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: 12 }}>
-                  <h3 style={{ fontSize: '16px', fontWeight: 600, margin: 0, flex: 1, marginRight: 12, color: '#000000' }}>
+                  <h3 style={{ fontSize: '16px', fontWeight: 600, margin: 0, flex: 1, marginRight: 12, color: '#ffffff' }}>
                     {activity.title}
                   </h3>
                   <Tag color={getCategoryColor(activity.category)} style={{ borderRadius: 12 }}>
@@ -159,14 +159,14 @@ function Home() {
                 </div>
                 
                 <div style={{ display: 'flex', alignItems: 'center', gap: 6, marginBottom: 16, fontWeight: 500 }}>
-                  <EnvironmentOutlined style={{ color: '#000000' }} />
-                  <span style={{ color: '#000000' }}>{activity.location}</span>
+                  <EnvironmentOutlined style={{ color: '#ffffff' }} />
+                  <span style={{ color: '#ffffff' }}>{activity.location}</span>
                 </div>
 
                 <div style={{ marginBottom: 16 }}>
                   <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: 8 }}>
-                    <span style={{ fontSize: '12px', color: '#000000', fontWeight: 600 }}>报名进度</span>
-                    <span style={{ fontSize: '12px', fontWeight: 600, color: '#000000' }}>
+                    <span style={{ fontSize: '12px', color: '#ffffff', fontWeight: 600 }}>报名进度</span>
+                    <span style={{ fontSize: '12px', fontWeight: 600, color: '#ffffff' }}>
                       {activity.currentPeople}/{activity.minPeople}人
                     </span>
                   </div>
@@ -202,7 +202,7 @@ function Home() {
                     alignItems: 'center',
                     gap: 6
                   }}>
-                    <span style={{ color: '#000000', fontSize: '12px', fontWeight: 600 }}>
+                    <span style={{ color: '#ffffff', fontSize: '12px', fontWeight: 600 }}>
                       已达成！将于 {dayjs(activity.scheduledDate).format('M月D日')} 举办
                     </span>
                   </div>
@@ -212,7 +212,7 @@ function Home() {
           ))}
           {activities.length === 0 && (
             <Col xs={24}>
-              <div style={{ textAlign: 'center', padding: 40, color: '#000000' }}>
+              <div style={{ textAlign: 'center', padding: 40, color: '#ffffff' }}>
                 <CalendarOutlined style={{ fontSize: 48, marginBottom: 16, opacity: 0.5 }} />
                 <p>暂无进行中的活动</p>
               </div>
@@ -240,7 +240,7 @@ function Home() {
             本周班车
           </h2>
           <Link to="/bus">
-            <Button type="link" style={{ color: '#000000' }}>
+            <Button type="link" style={{ color: '#ffffff' }}>
               查看全部 <ArrowRightOutlined />
             </Button>
           </Link>
@@ -249,7 +249,7 @@ function Home() {
         <Row gutter={[16, 16]}>
           {busSchedules.length === 0 && (
             <Col xs={24}>
-              <div style={{ textAlign: 'center', padding: 40, color: '#000000' }}>
+              <div style={{ textAlign: 'center', padding: 40, color: '#ffffff' }}>
                 <CarOutlined style={{ fontSize: 48, marginBottom: 16, opacity: 0.5 }} />
                 <p>暂无班车数据</p>
               </div>
@@ -271,28 +271,28 @@ function Home() {
                       {schedule.direction}
                     </Tag>
                     <div>
-                      <div style={{ fontSize: '20px', fontWeight: 700, color: '#000000' }}>
+                      <div style={{ fontSize: '20px', fontWeight: 700, color: '#ffffff' }}>
                         {schedule.departTime}
                       </div>
-                      <div style={{ fontSize: '12px', color: '#000000', fontWeight: 500 }}>
+                      <div style={{ fontSize: '12px', color: '#ffffff', fontWeight: 500 }}>
                         出发
                       </div>
                     </div>
-                    <div style={{ color: '#000000', fontSize: '14px', fontWeight: 600 }}>→</div>
+                    <div style={{ color: '#ffffff', fontSize: '14px', fontWeight: 600 }}>→</div>
                     <div>
-                      <div style={{ fontSize: '20px', fontWeight: 700, color: '#000000' }}>
+                      <div style={{ fontSize: '20px', fontWeight: 700, color: '#ffffff' }}>
                         {schedule.arriveTime}
                       </div>
-                      <div style={{ fontSize: '12px', color: '#000000', fontWeight: 500 }}>
+                      <div style={{ fontSize: '12px', color: '#ffffff', fontWeight: 500 }}>
                         到达
                       </div>
                     </div>
                   </div>
                   <div style={{ textAlign: 'right' }}>
-                    <div style={{ color: '#000000', fontSize: '24px', fontWeight: 700 }}>
+                    <div style={{ color: '#ffffff', fontSize: '24px', fontWeight: 700 }}>
                       ¥{schedule.price}
                     </div>
-                    <div style={{ fontSize: '12px', color: '#000000', fontWeight: 500 }}>
+                    <div style={{ fontSize: '12px', color: '#ffffff', fontWeight: 500 }}>
                       每人
                     </div>
                   </div>
@@ -332,7 +332,7 @@ function Home() {
                 </div>
                 
                 <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                  <div style={{ display: 'flex', alignItems: 'center', gap: 6, color: '#000000', fontWeight: 500 }}>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: 6, color: '#ffffff', fontWeight: 500 }}>
                     <TeamOutlined />
                     <span>剩余 {schedule.maxSeats - schedule.bookedSeats} 座</span>
                   </div>
@@ -367,7 +367,7 @@ function Home() {
             热门反馈
           </h2>
           <Link to="/feedbacks">
-            <Button type="link" style={{ color: '#000000' }}>
+            <Button type="link" style={{ color: '#ffffff' }}>
               查看全部 <ArrowRightOutlined />
             </Button>
           </Link>
@@ -398,22 +398,22 @@ function Home() {
                   {feedback.status}
                 </Tag>
               </div>
-              <p style={{ color: '#000000', margin: '0 0 12px 0', lineHeight: 1.6, fontWeight: 500 }}>
+              <p style={{ color: '#ffffff', margin: '0 0 12px 0', lineHeight: 1.6, fontWeight: 500 }}>
                 {feedback.content?.substring(0, 80)}...
               </p>
               <div style={{ display: 'flex', alignItems: 'center', gap: 16 }}>
-                <div style={{ display: 'flex', alignItems: 'center', gap: 6, color: '#000000' }}>
+                <div style={{ display: 'flex', alignItems: 'center', gap: 6, color: '#ffffff' }}>
                   <span style={{ fontSize: '16px' }}>+1</span>
                   <span style={{ fontWeight: 600 }}>{feedback.upvotes}</span>
                 </div>
-                <div style={{ color: '#000000', fontSize: '12px', fontWeight: 500 }}>
+                <div style={{ color: '#ffffff', fontSize: '12px', fontWeight: 500 }}>
                   {dayjs(feedback.createTime).format('MM-DD')}
                 </div>
               </div>
             </div>
           ))}
           {feedbacks.length === 0 && (
-            <div style={{ textAlign: 'center', padding: 40, color: '#000000' }}>
+            <div style={{ textAlign: 'center', padding: 40, color: '#ffffff' }}>
               <CommentOutlined style={{ fontSize: 48, marginBottom: 16, opacity: 0.5 }} />
               <p>暂无反馈数据</p>
             </div>
