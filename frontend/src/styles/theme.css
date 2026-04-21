@@ -12,10 +12,10 @@
   --bg-card: rgba(255, 255, 255, 0.15);
   --bg-glass: rgba(255, 255, 255, 0.1);
 
-  /* 文字色 */
+  /* 文字色 - 使用黑色文字确保清晰可读 */
   --text-primary: #1a1a2e;
-  --text-secondary: #6b7280;
-  --text-muted: #9ca3af;
+  --text-secondary: #374151;
+  --text-muted: #6b7280;
 
   /* 强调色 - 北极光蓝绿色系 */
   --accent-purple: #38bdf8;
@@ -169,10 +169,7 @@
 .stat-value {
   font-size: 32px;
   font-weight: 700;
-  background: var(--primary-gradient);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: #111827;
 }
 
 /* 列表项样式 */

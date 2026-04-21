@@ -170,6 +170,20 @@ body {
   transform: translateY(-6px);
 }
 
+/* 卡片内文字颜色 - 黑色 */
+.ant-card-body {
+  color: #1f2937 !important;
+}
+
+.ant-card-meta-title {
+  color: #111827 !important;
+  font-weight: 600 !important;
+}
+
+.ant-card-meta-description {
+  color: #4b5563 !important;
+}
+
 /* 日历样式 */
 .ant-picker-calendar {
   border-radius: 16px !important;
@@ -233,11 +247,22 @@ body {
   background: rgba(255, 255, 255, 0.1) !important;
   border: 1px solid rgba(255, 255, 255, 0.2) !important;
   transition: all 0.3s ease !important;
+  color: #1f2937 !important;
 }
 
 .ant-list-item:hover {
   border-color: rgba(56, 189, 248, 0.2) !important;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08) !important;
+}
+
+/* 列表项文字 - 黑色 */
+.ant-list-item-meta-title {
+  color: #111827 !important;
+  font-weight: 600 !important;
+}
+
+.ant-list-item-meta-description {
+  color: #4b5563 !important;
 }
 
 /* 步骤条样式 */
