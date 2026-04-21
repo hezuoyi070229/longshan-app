@@ -81,6 +81,15 @@ p, span, div {
   color: #000000 !important;
 }
 
+/* Radio Button 文字颜色 */
+.ant-radio-button-wrapper {
+  color: #000000 !important;
+}
+
+.ant-radio-button-wrapper-checked {
+  color: #000000 !important;
+}
+
 .ant-statistic-title {
   font-size: 20px !important;
   color: #ffffff !important;
