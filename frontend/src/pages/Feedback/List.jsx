@@ -47,9 +47,9 @@ function FeedbackList() {
   const getCategoryColor = (cat) => {
     const colors = {
       '交通': 'blue',
-      '设施': 'green',
+      '设施': 'cyan',
       '业态': 'purple',
-      '环境': 'cyan',
+      '环境': 'green',
       '管理': 'orange',
       '其他': 'default'
     }
@@ -119,11 +119,11 @@ function FeedbackList() {
                   <div style={{ 
                     marginTop: 16, 
                     padding: 12, 
-                    background: '#f6ffed', 
-                    borderRadius: 4,
-                    borderLeft: '3px solid #52c41a'
+                    background: 'rgba(20, 184, 166, 0.08)', 
+                    borderRadius: 8,
+                    borderLeft: '3px solid #14b8a6'
                   }}>
-                    <div style={{ color: '#52c41a', fontWeight: 'bold', marginBottom: 4 }}>
+                    <div style={{ color: '#14b8a6', fontWeight: 'bold', marginBottom: 4 }}>
                       官方回复
                     </div>
                     <p style={{ color: '#666' }}>{item.officialReply}</p>

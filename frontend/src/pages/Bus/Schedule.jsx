@@ -103,7 +103,7 @@ function BusSchedule() {
                       >
                         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
                           <div>
-                            <Tag color={schedule.direction === '去程' ? 'blue' : 'green'}>
+                            <Tag color={schedule.direction === '去程' ? 'blue' : 'cyan'}>
                               {schedule.direction}
                             </Tag>
                             <span style={{ fontSize: '20px', fontWeight: 'bold', marginLeft: 12 }}>

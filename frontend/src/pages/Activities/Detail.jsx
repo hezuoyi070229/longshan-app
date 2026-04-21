@@ -53,7 +53,7 @@ function ActivityDetail() {
     const colors = {
       '社交': 'blue',
       '文艺': 'purple',
-      '科普': 'green',
+      '科普': 'cyan',
       '竞技': 'orange',
       '其他': 'default'
     }
@@ -110,10 +110,10 @@ function ActivityDetail() {
           </p>
         )}
 
-        <div style={{ margin: '24px 0', padding: '16px', background: '#f6ffed', borderRadius: '8px' }}>
+        <div style={{ margin: '24px 0', padding: '16px', background: 'rgba(6, 182, 212, 0.08)', borderRadius: '8px' }}>
           <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: 8 }}>
             <span>已有 {activity.currentPeople} 人想参加（最低 {activity.minPeople} 人）</span>
-            <span style={{ color: isFull ? '#52c41a' : '#1890ff', fontWeight: 'bold' }}>
+            <span style={{ color: isFull ? '#06b6d4' : '#3b82f6', fontWeight: 'bold' }}>
               {progressPercent}%
             </span>
           </div>
@@ -121,9 +121,10 @@ function ActivityDetail() {
             percent={progressPercent}
             status={isFull ? 'success' : 'active'}
             showInfo={false}
+            strokeColor={isFull ? '#06b6d4' : '#3b82f6'}
           />
           {isFull && activity.scheduledDate && (
-            <p style={{ color: '#52c41a', marginTop: 8, textAlign: 'center' }}>
+            <p style={{ color: '#06b6d4', marginTop: 8, textAlign: 'center' }}>
               已达成！将于 {dayjs(activity.scheduledDate).format('YYYY年M月D日')} 举办
             </p>
           )}

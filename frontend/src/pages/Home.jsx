@@ -7,12 +7,9 @@ import {
   MessageOutlined, 
   ArrowRightOutlined,
   FireOutlined,
-  BusOutlined,
   CommentOutlined,
   TeamOutlined,
-  ClockCircleOutlined,
-  DollarOutlined,
-  SeatOutlined
+  ClockCircleOutlined
 } from '@ant-design/icons'
 import { Link } from 'react-router-dom'
 import { activityApi, busApi, feedbackApi } from '../services/api'
@@ -66,7 +63,7 @@ function Home() {
     const colors = {
       '社交': 'blue',
       '文艺': 'purple',
-      '科普': 'green',
+      '科普': 'cyan',
       '竞技': 'orange',
       '其他': 'default'
     }
@@ -102,8 +99,8 @@ function Home() {
             <Statistic
               title={<span style={{ color: 'var(--text-secondary)' }}>本周班车</span>}
               value={stats.totalBusSchedules}
-              prefix={<BusOutlined style={{ color: '#10b981' }} />}
-              valueStyle={{ color: '#10b981', fontWeight: 700, fontSize: '28px' }}
+              prefix={<CarOutlined style={{ color: '#06b6d4' }} />}
+              valueStyle={{ color: '#06b6d4', fontWeight: 700, fontSize: '28px' }}
             />
           </div>
         </Col>
@@ -177,7 +174,7 @@ function Home() {
                     percent={Math.round((activity.currentPeople / activity.minPeople) * 100)}
                     status={activity.currentPeople >= activity.minPeople ? 'success' : 'active'}
                     showInfo={false}
-                    strokeColor={activity.currentPeople >= activity.minPeople ? '#10b981' : '#8b5cf6'}
+                    strokeColor={activity.currentPeople >= activity.minPeople ? '#06b6d4' : '#8b5cf6'}
                     trailColor="rgba(0,0,0,0.05)"
                     strokeWidth={8}
                     style={{ margin: 0 }}
@@ -205,7 +202,7 @@ function Home() {
                     alignItems: 'center',
                     gap: 6
                   }}>
-                    <span style={{ color: '#10b981', fontSize: '12px' }}>
+                    <span style={{ color: '#06b6d4', fontSize: '12px' }}>
                       已达成！将于 {dayjs(activity.scheduledDate).format('M月D日')} 举办
                     </span>
                   </div>
@@ -239,7 +236,7 @@ function Home() {
             alignItems: 'center',
             gap: 8
           }}>
-            <BusOutlined style={{ color: '#10b981' }} />
+            <CarOutlined style={{ color: '#06b6d4' }} />
             本周班车
           </h2>
           <Link to="/bus">
@@ -253,7 +250,7 @@ function Home() {
           {busSchedules.length === 0 && (
             <Col xs={24}>
               <div style={{ textAlign: 'center', padding: 40, color: 'var(--text-muted)' }}>
-                <BusOutlined style={{ fontSize: 48, marginBottom: 16, opacity: 0.5 }} />
+                <CarOutlined style={{ fontSize: 48, marginBottom: 16, opacity: 0.5 }} />
                 <p>暂无班车数据</p>
               </div>
             </Col>
@@ -268,7 +265,7 @@ function Home() {
                 <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 16 }}>
                   <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
                     <Tag 
-                      color={schedule.direction === '去程' ? 'blue' : 'green'}
+                      color={schedule.direction === '去程' ? 'blue' : 'cyan'}
                       style={{ borderRadius: 12, fontWeight: 600 }}
                     >
                       {schedule.direction}
@@ -312,7 +309,7 @@ function Home() {
                       width: 8, 
                       height: 8, 
                       borderRadius: '50%', 
-                      background: '#10b981' 
+                      background: '#06b6d4' 
                     }} />
                     <span style={{ fontWeight: 500 }}>{schedule.fromLocation}</span>
                   </div>

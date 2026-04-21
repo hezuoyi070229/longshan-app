@@ -67,7 +67,7 @@ function Navigation() {
 function App() {
   return (
     <Router>
-      <Layout style={{ minHeight: '100vh', background: 'transparent' }}>
+      <Layout style={{ minHeight: '100vh', background: 'linear-gradient(135deg, rgba(224, 242, 254, 0.6) 0%, rgba(186, 230, 253, 0.6) 100%)' }}>
         <Navigation />
         <Content style={{ padding: '24px 50px', marginTop: 16 }}>
           <div className="glass-card" style={{ padding: 32, minHeight: 500 }}>

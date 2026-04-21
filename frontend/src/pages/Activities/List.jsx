@@ -36,7 +36,7 @@ function ActivityList() {
     const colors = {
       '社交': 'blue',
       '文艺': 'purple',
-      '科普': 'green',
+      '科普': 'cyan',
       '竞技': 'orange',
       '其他': 'default'
     }
@@ -97,7 +97,7 @@ function ActivityList() {
                 <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: 12 }}>
                   <Tag color={getStatusColor(activity.status)}>{activity.status}</Tag>
                   {activity.scheduledDate && (
-                    <span style={{ color: '#52c41a' }}>
+                    <span style={{ color: '#06b6d4' }}>
                       {dayjs(activity.scheduledDate).format('M月D日')}举办
                     </span>
                   )}
