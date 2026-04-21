@@ -32,45 +32,45 @@ body {
     url('/bg.jpg') no-repeat center center fixed;
   background-size: cover;
   min-height: 100vh;
-  font-size: 32px;
+  font-size: 22px;
 }
 
-/* 全局文字大小调整 - 原来的两倍 */
+/* 全局文字大小调整 - 原来的1.4倍 */
 h1 {
-  font-size: 56px !important;
+  font-size: 34px !important;
 }
 
 h2 {
-  font-size: 44px !important;
+  font-size: 28px !important;
 }
 
 h3 {
-  font-size: 36px !important;
+  font-size: 22px !important;
 }
 
 p, span, div {
-  font-size: 30px !important;
+  font-size: 20px !important;
 }
 
 /* Ant Design 组件文字大小 */
 .ant-card-body {
-  font-size: 30px !important;
+  font-size: 20px !important;
 }
 
 .ant-btn {
-  font-size: 30px !important;
+  font-size: 20px !important;
 }
 
 .ant-tag {
-  font-size: 28px !important;
+  font-size: 18px !important;
 }
 
 .ant-statistic-title {
-  font-size: 30px !important;
+  font-size: 20px !important;
 }
 
 .ant-statistic-content {
-  font-size: 64px !important;
+  font-size: 40px !important;
 }
 
 .page-container {
