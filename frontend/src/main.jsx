@@ -25,6 +25,8 @@ const customTheme = {
     },
     Button: {
       borderRadius: 24,
+      colorPrimary: '#000000',
+      colorTextLightSolid: '#000000',
     },
     Input: {
       borderRadius: 12,
