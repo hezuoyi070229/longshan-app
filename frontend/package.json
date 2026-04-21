@@ -2,6 +2,7 @@
   "name": "longshan-frontend",
   "version": "1.0.1",
   "private": true,
+  "type": "module",
   "dependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -15,8 +16,8 @@
     "vite": "^5.0.0"
   },
   "scripts": {
-    "dev": "npx vite",
-    "build": "npx vite build",
-    "preview": "npx vite preview"
+    "dev": "vite",
+    "build": "node ./node_modules/vite/bin/vite.js build",
+    "preview": "vite preview"
   }
 }
