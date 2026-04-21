@@ -35,7 +35,7 @@ function Home() {
       setLoading(true)
       
       const [activityRes, busRes, feedbackRes] = await Promise.all([
-        activityApi.getList({ status: '报名中' }),
+        activityApi.getList({ status: '报名�? }),
         busApi.getSchedules({}),
         feedbackApi.getList({})
       ])
@@ -72,10 +72,10 @@ function Home() {
 
   const getStatusColor = (status) => {
     const colors = {
-      '报名中': 'success',
-      '已排期': 'processing',
-      '已结束': 'default',
-      '已取消': 'error'
+      '报名�?: 'success',
+      '已排�?: 'processing',
+      '已结�?: 'default',
+      '已取�?: 'error'
     }
     return colors[status] || 'default'
   }
@@ -158,17 +158,16 @@ function Home() {
                   </Tag>
                 </div>
                 
-                <div style={{ display: 'flex', alignItems: 'center', gap: 6, color: '#374151', marginBottom: 16, fontWeight: 500 }}>
+                <div style={{ display: 'flex', alignItems: 'center', gap: 6, color: '#000000', marginBottom: 16, fontWeight: 500 }}>
                   <EnvironmentOutlined />
                   <span>{activity.location}</span>
                 </div>
 
                 <div style={{ marginBottom: 16 }}>
                   <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: 8 }}>
-                    <span style={{ fontSize: '12px', color: '#4b5563', fontWeight: 600 }}>报名进度</span>
+                    <span style={{ fontSize: '12px', color: '#000000', fontWeight: 600 }}>报名进度</span>
                     <span style={{ fontSize: '12px', fontWeight: 600, color: '#06b6d4' }}>
-                      {activity.currentPeople}/{activity.minPeople}人
-                    </span>
+                      {activity.currentPeople}/{activity.minPeople}�?                    </span>
                   </div>
                   <Progress 
                     percent={Math.round((activity.currentPeople / activity.minPeople) * 100)}
@@ -203,7 +202,7 @@ function Home() {
                     gap: 6
                   }}>
                     <span style={{ color: '#059669', fontSize: '12px', fontWeight: 600 }}>
-                      已达成！将于 {dayjs(activity.scheduledDate).format('M月D日')} 举办
+                      已达成！将于 {dayjs(activity.scheduledDate).format('M月D�?)} 举办
                     </span>
                   </div>
                 )}
@@ -212,7 +211,7 @@ function Home() {
           ))}
           {activities.length === 0 && (
             <Col xs={24}>
-              <div style={{ textAlign: 'center', padding: 40, color: '#374151' }}>
+              <div style={{ textAlign: 'center', padding: 40, color: '#000000' }}>
                 <CalendarOutlined style={{ fontSize: 48, marginBottom: 16, opacity: 0.5 }} />
                 <p>暂无进行中的活动</p>
               </div>
@@ -249,7 +248,7 @@ function Home() {
         <Row gutter={[16, 16]}>
           {busSchedules.length === 0 && (
             <Col xs={24}>
-              <div style={{ textAlign: 'center', padding: 40, color: '#374151' }}>
+              <div style={{ textAlign: 'center', padding: 40, color: '#000000' }}>
                 <CarOutlined style={{ fontSize: 48, marginBottom: 16, opacity: 0.5 }} />
                 <p>暂无班车数据</p>
               </div>
@@ -274,16 +273,16 @@ function Home() {
                       <div style={{ fontSize: '20px', fontWeight: 700, color: '#111827' }}>
                         {schedule.departTime}
                       </div>
-                      <div style={{ fontSize: '12px', color: '#4b5563', fontWeight: 500 }}>
+                      <div style={{ fontSize: '12px', color: '#000000', fontWeight: 500 }}>
                         出发
                       </div>
                     </div>
-                    <div style={{ color: '#4b5563', fontSize: '14px', fontWeight: 600 }}>→</div>
+                    <div style={{ color: '#000000', fontSize: '14px', fontWeight: 600 }}>�?/div>
                     <div>
                       <div style={{ fontSize: '20px', fontWeight: 700, color: '#111827' }}>
                         {schedule.arriveTime}
                       </div>
-                      <div style={{ fontSize: '12px', color: '#4b5563', fontWeight: 500 }}>
+                      <div style={{ fontSize: '12px', color: '#000000', fontWeight: 500 }}>
                         到达
                       </div>
                     </div>
@@ -292,7 +291,7 @@ function Home() {
                     <div style={{ color: '#f59e0b', fontSize: '24px', fontWeight: 700 }}>
                       ¥{schedule.price}
                     </div>
-                    <div style={{ fontSize: '12px', color: '#4b5563', fontWeight: 500 }}>
+                    <div style={{ fontSize: '12px', color: '#000000', fontWeight: 500 }}>
                       每人
                     </div>
                   </div>
@@ -332,9 +331,9 @@ function Home() {
                 </div>
                 
                 <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                  <div style={{ display: 'flex', alignItems: 'center', gap: 6, color: '#374151', fontWeight: 500 }}>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: 6, color: '#000000', fontWeight: 500 }}>
                     <TeamOutlined />
-                    <span>剩余 {schedule.maxSeats - schedule.bookedSeats} 座</span>
+                    <span>剩余 {schedule.maxSeats - schedule.bookedSeats} �?/span>
                   </div>
                   <Link to="/bus">
                     <Button type="primary" size="small" style={{ borderRadius: 20 }}>
@@ -392,13 +391,13 @@ function Home() {
                   {feedback.title}
                 </h4>
                 <Tag 
-                  color={feedback.status === '已回复' ? 'success' : 'processing'}
+                  color={feedback.status === '已回�? ? 'success' : 'processing'}
                   style={{ borderRadius: 12 }}
                 >
                   {feedback.status}
                 </Tag>
               </div>
-              <p style={{ color: '#374151', margin: '0 0 12px 0', lineHeight: 1.6, fontWeight: 500 }}>
+              <p style={{ color: '#000000', margin: '0 0 12px 0', lineHeight: 1.6, fontWeight: 500 }}>
                 {feedback.content?.substring(0, 80)}...
               </p>
               <div style={{ display: 'flex', alignItems: 'center', gap: 16 }}>
@@ -406,14 +405,14 @@ function Home() {
                   <span style={{ fontSize: '16px' }}>+1</span>
                   <span style={{ fontWeight: 600 }}>{feedback.upvotes}</span>
                 </div>
-                <div style={{ color: '#4b5563', fontSize: '12px', fontWeight: 500 }}>
+                <div style={{ color: '#000000', fontSize: '12px', fontWeight: 500 }}>
                   {dayjs(feedback.createTime).format('MM-DD')}
                 </div>
               </div>
             </div>
           ))}
           {feedbacks.length === 0 && (
-            <div style={{ textAlign: 'center', padding: 40, color: '#374151' }}>
+            <div style={{ textAlign: 'center', padding: 40, color: '#000000' }}>
               <CommentOutlined style={{ fontSize: 48, marginBottom: 16, opacity: 0.5 }} />
               <p>暂无反馈数据</p>
             </div>

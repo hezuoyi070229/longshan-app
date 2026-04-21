@@ -71,7 +71,7 @@ body {
   display: none !important;
 }
 
-/* 滚动条美化 */
+/* 滚动条美�?*/
 ::-webkit-scrollbar {
   width: 8px;
   height: 8px;
@@ -133,7 +133,7 @@ body {
   border: none !important;
 }
 
-/* 输入框样式 */
+/* 输入框样�?*/
 .ant-input,
 .ant-input-affix-wrapper {
   border-radius: 12px !important;
@@ -147,7 +147,7 @@ body {
   box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.15) !important;
 }
 
-/* 卡片样式 - 高透明悬浮玻璃态 */
+/* 卡片样式 - 高透明悬浮玻璃�?*/
 .ant-card {
   border-radius: 20px !important;
   border: 1px solid rgba(255, 255, 255, 0.25) !important;
@@ -170,7 +170,7 @@ body {
   transform: translateY(-6px);
 }
 
-/* 卡片内文字颜色 - 黑色 */
+/* 卡片内文字颜�?- 黑色 */
 .ant-card-body {
   color: #1f2937 !important;
 }
@@ -181,7 +181,7 @@ body {
 }
 
 .ant-card-meta-description {
-  color: #4b5563 !important;
+  color: #000000 !important;
 }
 
 /* 日历样式 */
@@ -255,22 +255,22 @@ body {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08) !important;
 }
 
-/* 列表项文字 - 黑色 */
+/* 列表项文�?- 黑色 */
 .ant-list-item-meta-title {
   color: #111827 !important;
   font-weight: 600 !important;
 }
 
 .ant-list-item-meta-description {
-  color: #4b5563 !important;
+  color: #000000 !important;
 }
 
-/* 步骤条样式 */
+/* 步骤条样�?*/
 .ant-steps-item-icon {
   border-radius: 50% !important;
 }
 
-/* 进度条样式 */
+/* 进度条样�?*/
 .ant-progress-bg {
   border-radius: 100px !important;
   background: linear-gradient(90deg, #38bdf8 0%, #22d3ee 100%) !important;
@@ -310,7 +310,7 @@ body {
   color: white !important;
 }
 
-/* 开关样式 */
+/* 开关样�?*/
 .ant-switch-checked {
   background: linear-gradient(135deg, #10b981 0%, #059669 100%) !important;
 }
@@ -325,7 +325,7 @@ body {
   box-shadow: 0 2px 8px rgba(56, 189, 248, 0.4) !important;
 }
 
-/* 时间选择器样式 */
+/* 时间选择器样�?*/
 .ant-picker {
   border-radius: 12px !important;
   border: 1px solid rgba(0, 0, 0, 0.08) !important;
@@ -347,7 +347,7 @@ body {
   animation: slideInUp 0.5s ease-out;
 }
 
-/* 响应式调整 */
+/* 响应式调�?*/
 @media (max-width: 768px) {
   .nav-menu-modern {
     display: none !important;
