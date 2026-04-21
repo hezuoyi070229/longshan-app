@@ -189,23 +189,23 @@ p, span, div {
 /* 卡片样式 - 高透明悬浮玻璃�?*/
 .ant-card {
   border-radius: 20px !important;
-  border: 1px solid rgba(255, 255, 255, 0.25) !important;
-  background: rgba(255, 255, 255, 0.15) !important;
+  border: 1px solid rgba(255, 255, 255, 0.4) !important;
+  background: rgba(255, 255, 255, 0.8) !important;
   backdrop-filter: blur(20px) !important;
   -webkit-backdrop-filter: blur(20px) !important;
   box-shadow: 
     0 8px 32px rgba(0, 0, 0, 0.1),
     0 2px 8px rgba(0, 0, 0, 0.05),
-    inset 0 1px 0 rgba(255, 255, 255, 0.4) !important;
+    inset 0 1px 0 rgba(255, 255, 255, 0.6) !important;
   transition: all 0.3s ease !important;
 }
 
 .ant-card:hover {
-  background: rgba(255, 255, 255, 0.25) !important;
+  background: rgba(255, 255, 255, 0.9) !important;
   box-shadow: 
     0 16px 48px rgba(0, 0, 0, 0.15),
     0 4px 16px rgba(0, 0, 0, 0.08),
-    inset 0 1px 0 rgba(255, 255, 255, 0.5) !important;
+    inset 0 1px 0 rgba(255, 255, 255, 0.7) !important;
   transform: translateY(-6px);
 }
 
