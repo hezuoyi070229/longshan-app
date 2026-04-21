@@ -186,7 +186,7 @@ function Home() {
                     {activity.status}
                   </Tag>
                   <Link to={`/activities/${activity.id}`}>
-                    <Button type="primary" size="small" style={{ borderRadius: 20 }}>
+                    <Button type="primary" size="small" style={{ borderRadius: 20, color: '#000000' }}>
                       查看详情
                     </Button>
                   </Link>
@@ -337,7 +337,7 @@ function Home() {
                     <span>剩余 {schedule.maxSeats - schedule.bookedSeats} 座</span>
                   </div>
                   <Link to="/bus">
-                    <Button type="primary" size="small" style={{ borderRadius: 20 }}>
+                    <Button type="primary" size="small" style={{ borderRadius: 20, color: '#000000' }}>
                       立即预约
                     </Button>
                   </Link>
