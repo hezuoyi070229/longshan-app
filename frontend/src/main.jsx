@@ -6,11 +6,11 @@ import App from './App.jsx'
 import './index.css'
 import './styles/theme.css'
 
-// 自定义主题配置
+// 自定义主题配置 - 北极光蓝绿色调
 const customTheme = {
   token: {
-    colorPrimary: '#06b6d4',
-    colorSuccess: '#10b981',
+    colorPrimary: '#38bdf8',
+    colorSuccess: '#22d3ee',
     colorWarning: '#f59e0b',
     colorError: '#ef4444',
     colorInfo: '#3b82f6',

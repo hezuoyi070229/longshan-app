@@ -38,7 +38,7 @@ function Navigation() {
       <div style={{ 
         fontSize: '20px', 
         fontWeight: '700', 
-        background: 'linear-gradient(135deg, #06b6d4 0%, #14b8a6 100%)',
+        background: 'linear-gradient(135deg, #38bdf8 0%, #22d3ee 100%)',
         WebkitBackgroundClip: 'text',
         WebkitTextFillColor: 'transparent',
         backgroundClip: 'text',
