@@ -38,10 +38,10 @@ function Navigation() {
       backdropFilter: 'blur(10px)',
       WebkitBackdropFilter: 'blur(10px)',
       borderBottom: '1px solid rgba(255, 255, 255, 0.2)',
-    }}
-      <div style={{ 
-        fontSize: '20px', 
-        fontWeight: '700', 
+    }}>
+      <div style={{
+        fontSize: '20px',
+        fontWeight: '700',
         background: 'linear-gradient(135deg, #38bdf8 0%, #22d3ee 100%)',
         WebkitBackgroundClip: 'text',
         WebkitTextFillColor: 'transparent',
