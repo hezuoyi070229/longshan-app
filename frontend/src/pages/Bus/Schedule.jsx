@@ -131,6 +131,7 @@ function BusSchedule() {
                           type={isFull ? 'default' : 'primary'}
                           disabled={isFull}
                           block
+                          className={isFull ? '' : 'btn-booking'}
                           style={{ marginTop: 12 }}
                           onClick={() => handleBook(schedule)}
                         >

@@ -52,7 +52,7 @@ function ActivityDetail() {
   const getCategoryColor = (category) => {
     const colors = {
       '社交': 'blue',
-      '文艺': 'purple',
+      '文艺': 'cyan',
       '科普': 'cyan',
       '竞技': 'orange',
       '其他': 'default'

@@ -9,7 +9,7 @@ import './styles/theme.css'
 // 自定义主题配置
 const customTheme = {
   token: {
-    colorPrimary: '#8b5cf6',
+    colorPrimary: '#06b6d4',
     colorSuccess: '#10b981',
     colorWarning: '#f59e0b',
     colorError: '#ef4444',

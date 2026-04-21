@@ -48,7 +48,7 @@ function FeedbackList() {
     const colors = {
       '交通': 'blue',
       '设施': 'cyan',
-      '业态': 'purple',
+      '业态': 'cyan',
       '环境': 'green',
       '管理': 'orange',
       '其他': 'default'

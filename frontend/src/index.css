@@ -59,20 +59,20 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: rgba(139, 92, 246, 0.3);
+  background: rgba(6, 182, 212, 0.3);
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: rgba(139, 92, 246, 0.5);
+  background: rgba(6, 182, 212, 0.5);
 }
 
 /* 选中效果 */
 .ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled) {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+  background: linear-gradient(135deg, #06b6d4 0%, #14b8a6 100%) !important;
   border-color: transparent !important;
   color: white !important;
-  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4) !important;
+  box-shadow: 0 4px 15px rgba(6, 182, 212, 0.4) !important;
 }
 
 /* 按钮渐变效果 - 青绿色 */
@@ -85,6 +85,20 @@ body {
 .ant-btn-primary:hover {
   transform: translateY(-2px);
   box-shadow: 0 6px 20px rgba(20, 184, 166, 0.6) !important;
+}
+
+/* 预约按钮 - 浅绿色 */
+.btn-booking {
+  background: linear-gradient(135deg, #bbf7d0 0%, #86efac 100%) !important;
+  border: none !important;
+  box-shadow: 0 4px 15px rgba(134, 239, 172, 0.4) !important;
+  color: #14532d !important;
+  font-weight: 600 !important;
+}
+
+.btn-booking:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(134, 239, 172, 0.6) !important;
 }
 
 /* 标签样式 */
@@ -105,8 +119,8 @@ body {
 
 .ant-input:focus,
 .ant-input-affix-wrapper:focus-within {
-  border-color: #8b5cf6 !important;
-  box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.1) !important;
+  border-color: #06b6d4 !important;
+  box-shadow: 0 0 0 3px rgba(6, 182, 212, 0.1) !important;
 }
 
 /* 卡片样式 - 蓝绿色渐变玻璃态 */
@@ -142,6 +156,34 @@ body {
   padding: 16px 24px !important;
 }
 
+/* 日历选中日期 - 蓝绿色 */
+.ant-picker-calendar-date-value {
+  color: var(--text-primary) !important;
+}
+
+.ant-picker-calendar-selected-day .ant-picker-calendar-date {
+  background: linear-gradient(135deg, #06b6d4 0%, #14b8a6 100%) !important;
+  border-radius: 8px !important;
+  box-shadow: 0 4px 12px rgba(6, 182, 212, 0.4) !important;
+}
+
+.ant-picker-calendar-selected-day .ant-picker-calendar-date-value {
+  color: white !important;
+  font-weight: 600 !important;
+}
+
+/* 日历按钮 - 蓝绿色 */
+.ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled) {
+  background: linear-gradient(135deg, #06b6d4 0%, #14b8a6 100%) !important;
+  border-color: transparent !important;
+  color: white !important;
+  box-shadow: 0 4px 12px rgba(6, 182, 212, 0.4) !important;
+}
+
+.ant-radio-button-wrapper:hover {
+  color: #06b6d4 !important;
+}
+
 /* 模态框样式 */
 .ant-modal-content {
   border-radius: 20px !important;
@@ -170,7 +212,7 @@ body {
 }
 
 .ant-list-item:hover {
-  border-color: rgba(139, 92, 246, 0.2) !important;
+  border-color: rgba(6, 182, 212, 0.2) !important;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08) !important;
 }
 
@@ -182,7 +224,7 @@ body {
 /* 进度条样式 */
 .ant-progress-bg {
   border-radius: 100px !important;
-  background: linear-gradient(90deg, #667eea 0%, #764ba2 100%) !important;
+  background: linear-gradient(90deg, #06b6d4 0%, #14b8a6 100%) !important;
 }
 
 /* 徽章样式 */
@@ -211,8 +253,8 @@ body {
 }
 
 .ant-pagination-item-active {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
-  box-shadow: 0 4px 10px rgba(102, 126, 234, 0.4) !important;
+  background: linear-gradient(135deg, #06b6d4 0%, #14b8a6 100%) !important;
+  box-shadow: 0 4px 10px rgba(6, 182, 212, 0.4) !important;
 }
 
 .ant-pagination-item-active a {
@@ -226,12 +268,12 @@ body {
 
 /* 滑块样式 */
 .ant-slider-track {
-  background: linear-gradient(90deg, #667eea 0%, #764ba2 100%) !important;
+  background: linear-gradient(90deg, #06b6d4 0%, #14b8a6 100%) !important;
 }
 
 .ant-slider-handle {
-  border-color: #8b5cf6 !important;
-  box-shadow: 0 2px 8px rgba(139, 92, 246, 0.4) !important;
+  border-color: #06b6d4 !important;
+  box-shadow: 0 2px 8px rgba(6, 182, 212, 0.4) !important;
 }
 
 /* 时间选择器样式 */

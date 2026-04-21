@@ -62,7 +62,7 @@ function Home() {
   const getCategoryColor = (category) => {
     const colors = {
       '社交': 'blue',
-      '文艺': 'purple',
+      '文艺': 'cyan',
       '科普': 'cyan',
       '竞技': 'orange',
       '其他': 'default'
@@ -85,12 +85,12 @@ function Home() {
       {/* 统计卡片 */}
       <Row gutter={[16, 16]} style={{ marginBottom: 32 }}>
         <Col xs={24} sm={8}>
-          <div className="stat-card" style={{ background: 'linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%)' }}>
+          <div className="stat-card" style={{ background: 'linear-gradient(135deg, rgba(6, 182, 212, 0.1) 0%, rgba(20, 184, 166, 0.1) 100%)' }}>
             <Statistic
               title={<span style={{ color: 'var(--text-secondary)' }}>进行中的活动</span>}
               value={stats.totalActivities}
               prefix={<FireOutlined style={{ color: '#f59e0b' }} />}
-              valueStyle={{ color: '#8b5cf6', fontWeight: 700, fontSize: '28px' }}
+              valueStyle={{ color: '#06b6d4', fontWeight: 700, fontSize: '28px' }}
             />
           </div>
         </Col>
@@ -135,7 +135,7 @@ function Home() {
             本周热门活动
           </h2>
           <Link to="/activities">
-            <Button type="link" style={{ color: '#8b5cf6' }}>
+            <Button type="link" style={{ color: '#06b6d4' }}>
               查看更多 <ArrowRightOutlined />
             </Button>
           </Link>
@@ -166,7 +166,7 @@ function Home() {
                 <div style={{ marginBottom: 16 }}>
                   <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: 8 }}>
                     <span style={{ fontSize: '12px', color: 'var(--text-muted)' }}>报名进度</span>
-                    <span style={{ fontSize: '12px', fontWeight: 600, color: '#8b5cf6' }}>
+                    <span style={{ fontSize: '12px', fontWeight: 600, color: '#06b6d4' }}>
                       {activity.currentPeople}/{activity.minPeople}人
                     </span>
                   </div>
@@ -174,7 +174,7 @@ function Home() {
                     percent={Math.round((activity.currentPeople / activity.minPeople) * 100)}
                     status={activity.currentPeople >= activity.minPeople ? 'success' : 'active'}
                     showInfo={false}
-                    strokeColor={activity.currentPeople >= activity.minPeople ? '#06b6d4' : '#8b5cf6'}
+                    strokeColor={activity.currentPeople >= activity.minPeople ? '#06b6d4' : '#22d3ee'}
                     trailColor="rgba(0,0,0,0.05)"
                     strokeWidth={8}
                     style={{ margin: 0 }}
@@ -240,7 +240,7 @@ function Home() {
             本周班车
           </h2>
           <Link to="/bus">
-            <Button type="link" style={{ color: '#8b5cf6' }}>
+            <Button type="link" style={{ color: '#06b6d4' }}>
               查看全部 <ArrowRightOutlined />
             </Button>
           </Link>
@@ -325,7 +325,7 @@ function Home() {
                       width: 8, 
                       height: 8, 
                       borderRadius: '50%', 
-                      background: '#8b5cf6' 
+                      background: '#14b8a6' 
                     }} />
                     <span style={{ fontWeight: 500 }}>{schedule.toLocation}</span>
                   </div>
@@ -367,7 +367,7 @@ function Home() {
             热门反馈
           </h2>
           <Link to="/feedbacks">
-            <Button type="link" style={{ color: '#8b5cf6' }}>
+            <Button type="link" style={{ color: '#06b6d4' }}>
               查看全部 <ArrowRightOutlined />
             </Button>
           </Link>
@@ -384,7 +384,7 @@ function Home() {
                 cursor: 'pointer'
               }}
               className="feedback-item"
-              onMouseEnter={(e) => e.currentTarget.style.background = 'rgba(139, 92, 246, 0.02)'}
+              onMouseEnter={(e) => e.currentTarget.style.background = 'rgba(6, 182, 212, 0.02)'}
               onMouseLeave={(e) => e.currentTarget.style.background = 'transparent'}
             >
               <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: 8 }}>
@@ -402,7 +402,7 @@ function Home() {
                 {feedback.content?.substring(0, 80)}...
               </p>
               <div style={{ display: 'flex', alignItems: 'center', gap: 16 }}>
-                <div style={{ display: 'flex', alignItems: 'center', gap: 6, color: '#8b5cf6' }}>
+                <div style={{ display: 'flex', alignItems: 'center', gap: 6, color: '#06b6d4' }}>
                   <span style={{ fontSize: '16px' }}>+1</span>
                   <span style={{ fontWeight: 600 }}>{feedback.upvotes}</span>
                 </div>
