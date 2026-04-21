@@ -25,16 +25,20 @@ function Navigation() {
   ]
 
   return (
-    <Header className="nav-modern" style={{ 
-      position: 'sticky', 
-      top: 0, 
-      zIndex: 1000, 
+    <Header className="nav-modern" style={{
+      position: 'sticky',
+      top: 0,
+      zIndex: 1000,
       width: '100%',
       padding: '0 24px',
       display: 'flex',
       alignItems: 'center',
       justifyContent: 'space-between',
-    }}>
+      background: 'rgba(255, 255, 255, 0.1)',
+      backdropFilter: 'blur(10px)',
+      WebkitBackdropFilter: 'blur(10px)',
+      borderBottom: '1px solid rgba(255, 255, 255, 0.2)',
+    }}
       <div style={{ 
         fontSize: '20px', 
         fontWeight: '700', 
@@ -67,10 +71,10 @@ function Navigation() {
 function App() {
   return (
     <Router>
-      <Layout style={{ minHeight: '100vh', background: 'linear-gradient(135deg, rgba(224, 242, 254, 0.6) 0%, rgba(186, 230, 253, 0.6) 100%)' }}>
+      <Layout style={{ minHeight: '100vh', background: 'transparent' }}>
         <Navigation />
         <Content style={{ padding: '24px 50px', marginTop: 16 }}>
-          <div className="glass-card" style={{ padding: 32, minHeight: 500 }}>
+          <div style={{ padding: 32, minHeight: 500 }}>
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/activities" element={<ActivityList />} />
