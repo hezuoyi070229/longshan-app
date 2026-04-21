@@ -32,6 +32,45 @@ body {
     url('/bg.jpg') no-repeat center center fixed;
   background-size: cover;
   min-height: 100vh;
+  font-size: 16px;
+}
+
+/* 全局文字大小调整 */
+h1 {
+  font-size: 28px !important;
+}
+
+h2 {
+  font-size: 22px !important;
+}
+
+h3 {
+  font-size: 18px !important;
+}
+
+p, span, div {
+  font-size: 15px !important;
+}
+
+/* Ant Design 组件文字大小 */
+.ant-card-body {
+  font-size: 15px !important;
+}
+
+.ant-btn {
+  font-size: 15px !important;
+}
+
+.ant-tag {
+  font-size: 14px !important;
+}
+
+.ant-statistic-title {
+  font-size: 15px !important;
+}
+
+.ant-statistic-content {
+  font-size: 32px !important;
 }
 
 .page-container {
